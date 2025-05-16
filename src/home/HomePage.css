@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eef1f5;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.chat-wrapper {
+    width: 100vw; /* ✅ 使用更宽的视图宽度 */
+    max-width: 1000px; /* 最大宽度限制 */
+    height: 90vh;
+    margin: 2vh auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    background: #fff; /* ✅ 强制白底，防止继承背景色 */
+}
+
+.chat-message {
+    display: flex;
+    flex-direction: column;
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    word-break: break-word;
+    margin-bottom: 0.8rem;
+
+    max-width: 70%;     /* ✅ 限制最大宽度 */
+    width: fit-content; /* ✅ 自动根据内容长度决定实际宽度 */
+}
+
+
+.chat-message.own {
+    align-self: flex-end;
+    background-color: #daf1ff;
+    border-top-right-radius: 0;
+    margin-left: auto;
+}
+
+.chat-message.other {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    border-top-left-radius: 0;
+    margin-right: auto;
+}
+
+
+.chat-user {
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+.chat-text {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+.chat-input {
+    display: flex;
+    padding: 1rem;
+    gap: 0.5rem;
+    background: #f7f9fb;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.chat-input button {
+    padding: 0.6rem 1.2rem;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #0056b3;
+}
