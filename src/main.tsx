@@ -1,9 +1,8 @@
 // src/main.tsx
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LoginPage from "./login/LoginPage";
-import HomePage from "./home/HomePage";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
 import "./index.css";
 
 // 🔁 处理 GitHub Pages 重定向问题
@@ -16,10 +15,7 @@ if (redirectPath) {
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
         <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<LoginPage />} />
-                <Route path="/home" element={<HomePage />} />
-            </Routes>
+            <AppRoutes />
         </BrowserRouter>
     </React.StrictMode>
 );

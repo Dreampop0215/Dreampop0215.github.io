@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+
 // ✅ 你现有的配置，直接使用
 const firebaseConfig = {
     apiKey: "AIzaSyCy97Km2_8p0lRMyErnvNiWahm-CA05EWg",
@@ -20,5 +21,6 @@ const app = initializeApp(firebaseConfig);
 // 获取 Firebase Auth 和 Firestore 实例
 const auth = getAuth(app);
 const db = getFirestore(app);
+
 
 export { auth, db };
