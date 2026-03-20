@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
                 {/*    这是占位内容，未来可以在这里添加欢迎信息或其他内容。*/}
                 {/*</p>*/}
                 <img
-                    src="/public/images/watcher.jpg"
+                    src="/images/watcher.jpg"
                     alt="watcher"
                     style={{
                         maxWidth: "100%",
